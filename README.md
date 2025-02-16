@@ -3,7 +3,7 @@
 A modern e-commerce store built with Next.js, featuring a functional shopping cart, product listing, and smooth animations using Framer Motion.
 
 ## 🚀 Live Demo
-[Live Demo](#) (Replace with your actual deployed link)
+[https://e-commerce-store-six-sigma.vercel.app/] 
 
 ## 📌 Features
 - 🛍️ Product listing page
