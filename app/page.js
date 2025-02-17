@@ -92,12 +92,10 @@ export default function Home() {
        {/* Background Image with Dark Overlay */}
        <div className="absolute inset-0">
           <img
-            src="https://i.postimg.cc/sgCF59xj/colorful-shopping-bags.jpg"
-            alt="Hero Background"
-            objectFit="cover"
-            className="absolute inset-0 w-full h-full"
+            src="https://i.postimg.cc/L57x2qmX/tag-154930-1280.png"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/0"></div>
         </div>
 
         {/* Content */}
