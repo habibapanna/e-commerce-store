@@ -5,6 +5,7 @@ import { useCart } from "./context/cartContext";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -127,9 +128,16 @@ export default function Home() {
                 <h2 className="font-semibold mt-2">{product.title}</h2>
                 <p className="text-gray-600">${product.price}</p>
               </div>
-              <button onClick={() => addToCart(product)} className="bg-gradient-to-r from-black via-blue-950 to-black text-white px-4 py-2 mt-auto rounded">
+             <div className="flex gap-2">
+             <button onClick={() => addToCart(product)} className="bg-gradient-to-r from-black via-blue-950 to-black text-white px-4 py-2 mt-auto rounded">
                 Add to Cart
               </button>
+              <Link href={`/product/${product.id}`}>
+          <button className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 mt-2 w-full">
+            View Details
+          </button>
+        </Link>
+             </div>
             </div>
           ))}
         </div>

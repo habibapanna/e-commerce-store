@@ -67,7 +67,7 @@ const CartPage = () => {
                   className={`px-3 py-1 rounded flex items-center gap-1 transition ${
                     purchasedItems.includes(item.id)
                       ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-blue-500 text-white hover:bg-blue-600"
+                      : "bg-gradient-to-r from-black via-blue-950 to-black text-white"
                   }`}
                 >
                   <ShoppingCartIcon className="w-5 h-5" />
