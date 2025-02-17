@@ -101,11 +101,11 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 text-center">
-          <h1 className="text-4xl font-bold">Discover the Best Deals</h1>
-          <p className="mt-2 text-lg">Shop your favorite products at unbeatable prices!</p>
+          <h1 className="text-2xl md:text-4xl font-bold">Discover the Best Deals</h1>
+          <p className="mt-2 text-sm md:text-lg">Shop your favorite products at unbeatable prices!</p>
           <button
             onClick={scrollToFeaturedProducts}
-            className="mt-4 bg-gradient-to-r from-black via-blue-950 to-black text-white px-6 py-2 rounded-md"
+            className="mt-4 bg-gradient-to-r from-black via-blue-950 to-black text-white px-6 py-2 rounded-md text-sm md:text-lg"
           >
             Shop Now
           </button>
@@ -113,7 +113,7 @@ export default function Home() {
       </section>
       {/* Featured Products */}
       <section ref={featuredProductsRef} className="py-16">
-        <h2 className="text-4xl font-semibold mb-6">Featured Products</h2>
+        <h2 className="text-2xl md:text-4xl font-semibold mb-6">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {products.map((product) => (
             <div key={product.id} className="border p-4 rounded-lg shadow-lg bg-white flex flex-col justify-between h-full">
@@ -128,12 +128,12 @@ export default function Home() {
                 <h2 className="font-semibold mt-2">{product.title}</h2>
                 <p className="text-gray-600">${product.price}</p>
               </div>
-             <div className="flex gap-2">
-             <button onClick={() => addToCart(product)} className="bg-gradient-to-r from-black via-blue-950 to-black text-white px-4 py-2 mt-auto rounded">
+             <div className="flex gap-2 text-center items-center justify-center">
+             <button onClick={() => addToCart(product)} className="bg-gradient-to-r from-black via-blue-950 to-black text-white px-4 py-2 mt-auto rounded text-sm">
                 Add to Cart
               </button>
               <Link href={`/product/${product.id}`}>
-          <button className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 mt-2 w-full">
+          <button className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 mt-2 text-sm">
             View Details
           </button>
         </Link>
@@ -156,16 +156,16 @@ export default function Home() {
 
   {/* Content */}
   <div className="relative z-10 text-center">
-    <h2 className="text-4xl font-semibold">🔥 Exclusive Discounts</h2>
-    <p className="mt-2">Up to 50% off on selected items! Limited Time Offer.</p>
-    <button  onClick={handleDealClick} className="mt-4 bg-white text-gray-500 px-6 py-2 rounded-md font-semibold hover:bg-gray-200">
+    <h2 className="text-2xl md:text-4xl font-semibold">🔥 Exclusive Discounts</h2>
+    <p className="mt-2 text-sm md:text-lg">Up to 50% off on selected items! Limited Time Offer.</p>
+    <button  onClick={handleDealClick} className="mt-4 bg-white text-gray-500 px-6 py-2 rounded-md font-semibold hover:bg-gray-200 text-sm md:text-lg">
       Grab the Deal
     </button>
   </div>
 </section>
       {/* Customer Reviews */}
       <section className="py-16">
-        <h2 className="text-4xl font-semibold mb-6">What Our Customers Say</h2>
+        <h2 className="text-2xl md:text-4xl font-semibold mb-6">What Our Customers Say</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             { name: "Alice", review: "Amazing products and fast delivery!" },
@@ -188,21 +188,21 @@ export default function Home() {
       alt="Newsletter Subscription Background"
       className="absolute inset-0 w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-black/10"></div>
+    <div className="absolute inset-0 bg-black/50 md:bg-black/20"></div>
   </div>
   {/* Content */}
   <div className="relative z-10 text-center">
-    <h2 className="text-4xl font-semibold">Stay Updated!</h2>
-    <p className="mt-2">Subscribe to our newsletter for the latest offers.</p>
+    <h2 className="text-2xl md:text-4xl font-semibold">Stay Updated!</h2>
+    <p className="mt-2 text-sm md:text-lg">Subscribe to our newsletter for the latest offers.</p>
     <div className="mt-4 flex justify-center">
       <input
         type="email"
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="px-4 py-2 rounded-l-md text-black"
+        className="px-4 w-1/2 md:w-1/4 py-2 rounded-l-md text-black text-sm md:text-lg"
       />
-      <button onClick={handleSubscribe} className="bg-gradient-to-r from-black via-blue-950 to-black rounded-md px-6 py-2 rounded-r-m">
+      <button onClick={handleSubscribe} className="bg-gradient-to-r from-black via-blue-950 to-black rounded-md px-6 py-2 rounded-r-m text-sm md:text-lg">
         Subscribe
       </button>
     </div>
@@ -210,8 +210,8 @@ export default function Home() {
 </section>
       {/* Contact Us Section */}
       <section className="py-16 text-center">
-      <h2 className="text-4xl font-semibold">Contact Us</h2>
-      <p className="mt-2">Have any questions? Reach out to us anytime.</p>
+      <h2 className="text-2xl md:text-4xl font-semibold">Contact Us</h2>
+      <p className="mt-2 text-sm md:text-lg">Have any questions? Reach out to us anytime.</p>
 
       <form onSubmit={handleSubmit} className="mt-6 max-w-lg mx-auto">
         {/* Name Input */}
@@ -221,7 +221,7 @@ export default function Home() {
           placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-2 mb-4 border rounded-md"
+          className="w-full px-4 py-2 mb-4 border rounded-md text-sm md:text-lg"
         />
 
         {/* Email Input */}
@@ -231,7 +231,7 @@ export default function Home() {
           placeholder="Your Email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-2 mb-4 border rounded-md"
+          className="w-full px-4 py-2 mb-4 border rounded-md text-sm md:text-lg"
         />
 
         {/* Message Input */}
@@ -241,13 +241,13 @@ export default function Home() {
           value={formData.message}
           onChange={handleChange}
           rows="4"
-          className="w-full px-4 py-2 mb-4 border rounded-md"
+          className="w-full px-4 py-2 mb-4 border rounded-md text-sm md:text-lg"
         ></textarea>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-black via-blue-950 to-black text-white px-6 py-2 rounded-md"
+          className="w-full bg-gradient-to-r from-black via-blue-950 to-black text-white px-6 py-2 rounded-md text-sm md:text-lg"
         >
           Send Message
         </button>

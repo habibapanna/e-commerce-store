@@ -28,7 +28,7 @@ const CartPage = () => {
   };
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl text-center font-bold mb-4">Shopping Cart</h1>
+      <h1 className="text-2xl md:text-4xl text-center font-bold mb-4">Shopping Cart</h1>
 
       {cart.length === 0 ? (
         <div>
@@ -53,7 +53,7 @@ const CartPage = () => {
               />
 
               {/* Product Details */}
-              <div className="flex-1">
+              <div className="flex-1 text-center md:text-left">
                 <span className="text-lg font-medium">{item.title}</span>
                 <p className="text-gray-600">${item.price}</p>
               </div>
@@ -64,7 +64,7 @@ const CartPage = () => {
                 <button
                   onClick={() => handleBuy(item)}
                   disabled={purchasedItems.includes(item.id)} // Disable after purchase
-                  className={`px-3 py-1 rounded flex items-center gap-1 transition ${
+                  className={`px-3 text-sm py-1 rounded flex items-center gap-1 transition ${
                     purchasedItems.includes(item.id)
                       ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                       : "bg-gradient-to-r from-black via-blue-950 to-black text-white"

@@ -14,14 +14,14 @@ const Navbar = () => {
         <img
           src="https://i.postimg.cc/JzxT3CCN/shopping-bag.png"
           alt="E-Commerce Logo"
-          className="w-8 h-8"
+          className="w-6 h-6 md:w-8 md:h-8"
         />
-        <h1 className="text-xl font-bold">E-Commerce Store</h1>
+        <h1 className="text-lg md:text-xl font-bold">E-Commerce Store</h1>
       </div>
       <div className="flex gap-4">
         <Link
           href="/"
-          className={`hover:text-yellow-400 ${
+          className={`text-sm md:text-lg hover:text-yellow-400 ${
             pathname === "/" ? "text-yellow-400" : ""
           }`}
         >
@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
         <Link
           href="/products"
-          className={`hover:text-yellow-400 ${
+          className={`text-sm md:text-lg hover:text-yellow-400 ${
             pathname === "/products" ? "text-yellow-400" : ""
           }`}
         >

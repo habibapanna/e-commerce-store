@@ -32,8 +32,8 @@ const ProductDetails = () => {
           height={400}
           className="mx-auto w-full h-[400px] object-contain"
         />
-        <div>
-          <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
+        <div className="text-center md:text-left">
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">{product.title}</h1>
           <p className="text-gray-600">{product.description}</p>
           <p className="text-xl font-semibold mt-4 text-blue-600">${product.price}</p>
           <p className="font-semibold mt-4">{product.category}</p>
