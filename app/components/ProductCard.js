@@ -2,12 +2,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../context/cartContext";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="border p-4 rounded-lg shadow-lg bg-white flex flex-col justify-between h-full">
+    <motion.div
+      className="border p-4 rounded-lg shadow-lg bg-white flex flex-col justify-between h-full"
+      initial={{ opacity: 0, scale: 0.9 }} // Start faded out and slightly smaller
+      animate={{ opacity: 1, scale: 1 }} // Animate to full size
+      transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition
+      whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }} // Lift effect on hover
+    >
       <Image
         src={product.image}
         alt={product.title || "Product image"}
@@ -20,19 +27,25 @@ const ProductCard = ({ product }) => {
         <p className="text-gray-600">${product.price}</p>
       </div>
       <div className="flex gap-2 mt-auto items-center justify-center">
-        <button
+        <motion.button
           onClick={() => addToCart(product)}
           className="bg-gradient-to-r from-black via-blue-950 to-black text-white px-4 py-2 rounded text-sm"
+          whileHover={{ scale: 1.1 }} // Button scales up on hover
+          whileTap={{ scale: 0.9 }} // Button shrinks slightly when clicked
         >
           Add to Cart
-        </button>
+        </motion.button>
         <Link href={`/product/${product.id}`}>
-          <button className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 text-sm">
+          <motion.button
+            className="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-900 text-sm"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             View Details
-          </button>
+          </motion.button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
