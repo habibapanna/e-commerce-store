@@ -52,7 +52,7 @@ export default function ProductsPage() {
               key={category.name}
               onClick={() => setSelectedCategory(category.name)}
               className={`bg-white shadow-md rounded-lg p-6 text-center border cursor-pointer hover:shadow-xl transition ${
-                selectedCategory === category.name ? "bg-blue-100" : ""
+                selectedCategory === category.name ? "bg-blue-200" : ""
               }`}
             >
               <Icon icon={category.icon} className={`text-4xl mb-4 ${category.color}`} />

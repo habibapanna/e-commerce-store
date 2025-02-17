@@ -33,7 +33,7 @@ const CartPage = () => {
       {cart.length === 0 ? (
         <div>
             <p className="text-gray-600 text-center">Your cart is empty.</p>
-            <img className="w-[200px] mt-5 mx-auto rounded-full h-[200px] object-cover" src="https://i.postimg.cc/44c7mM0B/pexels-karolina-grabowska-5632402.jpg">
+            <img className="w-[200px] mt-5 mx-auto rounded-full h-[200px] object-cover" src="https://i.postimg.cc/pXWjLVmV/shopping-venture-1026501-1280.jpg">
             </img>
         </div>
       ) : (

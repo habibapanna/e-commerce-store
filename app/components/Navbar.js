@@ -9,7 +9,7 @@ const Navbar = () => {
   const { getCartItemCount } = useCart();
 
   return (
-    <nav className="bg-black text-white p-4 flex flex-col md:flex-row justify-between items-center sticky z-50 top-0">
+    <nav className="bg-gradient-to-r from-black via-blue-950 to-black text-white p-4 flex flex-col md:flex-row justify-between items-center sticky z-50 top-0">
       <div className="flex items-center gap-2">
         <img
           src="https://i.postimg.cc/JzxT3CCN/shopping-bag.png"
@@ -21,27 +21,27 @@ const Navbar = () => {
       <div className="flex gap-4">
         <Link
           href="/"
-          className={`hover:text-blue-400 ${
-            pathname === "/" ? "text-blue-400 font-semibold" : ""
+          className={`hover:text-yellow-400 ${
+            pathname === "/" ? "text-yellow-400" : ""
           }`}
         >
           Home
         </Link>
         <Link
           href="/products"
-          className={`hover:text-blue-400 ${
-            pathname === "/products" ? "text-blue-400 font-semibold" : ""
+          className={`hover:text-yellow-400 ${
+            pathname === "/products" ? "text-yellow-400" : ""
           }`}
         >
           Products
         </Link>
         <Link
           href="/cart"
-          className={`hover:text-blue-400 flex items-center ${
-            pathname === "/cart" ? "text-blue-400 font-semibold" : ""
+          className={`hover:text-pink-500 flex items-center ${
+            pathname === "/cart" ? "text-pink-500" : ""
           }`}
         >
-          <ShoppingCartIcon className="w-5 h-5 ml-1 hover:text-blue-400" />
+          <ShoppingCartIcon className="w-5 h-5 ml-1 hover:text-pink-500" />
           <span>{getCartItemCount()}</span>
         </Link>
       </div>

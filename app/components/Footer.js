@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope 
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-gradient-to-r from-black via-blue-950 to-black text-white py-8">
       <div className="container mx-auto flex flex-col items-center text-center px-4 md:flex-row md:justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-3">

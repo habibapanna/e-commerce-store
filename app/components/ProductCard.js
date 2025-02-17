@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
       </div>
       <button
         onClick={() => addToCart(product)} // Add product to cart on click
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 mt-auto rounded"
+        className="bg-gradient-to-r from-black via-blue-950 to-black text-white px-4 py-2 mt-auto rounded"
       >
         Add to Cart
       </button>
