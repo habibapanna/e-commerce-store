@@ -58,7 +58,7 @@ export default function ProductsPage() {
               key={category.name}
               onClick={() => setSelectedCategory(category.name)}
               className={`bg-white shadow-md rounded-lg p-6 text-center border cursor-pointer hover:shadow-xl transition ${
-                selectedCategory === category.name ? "bg-blue-200" : ""
+                selectedCategory === category.name ? "border-8 border-blue-950" : ""
               }`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
