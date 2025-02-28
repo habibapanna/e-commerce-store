@@ -3,6 +3,9 @@ import Link from "next/link";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import { useCart } from "../context/cartContext";
+import {LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
+
 
 const Navbar = () => {
   const pathname = usePathname(); // Get the current route
@@ -27,14 +30,14 @@ const Navbar = () => {
         >
           Home
         </Link>
-        <Link
+        {/* <Link
           href="/products"
           className={`text-sm md:text-lg hover:text-yellow-400 ${
             pathname === "/products" ? "text-yellow-400" : ""
           }`}
-        >
-          Products
-        </Link>
+        > */}
+          <LoginLink className="text-sm md:text-lg hover:text-yellow-400">Products</LoginLink>
+        {/* </Link> */}
         <Link
           href="/cart"
           className={`hover:text-pink-500 flex items-center ${

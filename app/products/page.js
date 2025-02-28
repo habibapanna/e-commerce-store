@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import ProductList from "../components/ProductList";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion"; // Import Framer Motion
+import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
 
 const categories = [
   { name: "All Products", icon: "mdi:cart", color: "text-purple-500" },
@@ -45,6 +47,8 @@ export default function ProductsPage() {
   return (
     <div className="container mx-auto p-4">
       {/* Categories Section */}
+      <div className="text-right"><LogoutLink className="bg-blue-900 hover:bg-blue-950 p-2 rounded text-white">Log out</LogoutLink></div>
+      
       <motion.section 
         className="py-5 bg-white"
         initial={{ opacity: 0, y: 20 }}
@@ -62,8 +66,8 @@ export default function ProductsPage() {
               }`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }} // Stagger effect
-              whileHover={{ scale: 1.05 }} // Hover effect
+              transition={{ duration: 0.1, delay: index * 0.1 }} // Stagger effect
+              whileHover={{ scale: 1.01 }} // Hover effect
             >
               <Icon icon={category.icon} className={`text-4xl mb-4 ${category.color}`} />
               <h3 className="text-lg md:text-xl font-semibold capitalize">{category.name}</h3>

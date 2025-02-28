@@ -33,6 +33,7 @@ const ProductCard = ({ product }) => {
           whileHover={{ scale: 1.1 }} // Button scales up on hover
           whileTap={{ scale: 0.9 }} // Button shrinks slightly when clicked
         >
+
           Add to Cart
         </motion.button>
         <Link href={`/product/${product.id}`}>
